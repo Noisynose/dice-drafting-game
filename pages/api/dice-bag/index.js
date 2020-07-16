@@ -4,5 +4,5 @@ export default (req, res) => {
 
   const result = DiceBagController.generate();
 
-  res.status(200).json(result);
+  res.status(200).json(result || {});
 }

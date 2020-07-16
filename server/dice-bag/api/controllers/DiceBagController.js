@@ -1,12 +1,16 @@
+import DiceBagConfiguration from '../../core/models/DiceBagConfiguration'
+
 class DiceBagController {
-  diceBagService;
+  _diceBagService;
 
   constructor(diceBagService) {
-    this.diceBagService = diceBagService;
+    this._diceBagService = diceBagService;
   }
 
   generate() {
-    return this.diceBagService.create();
+    const defaultConfig = new DiceBagConfiguration(5, 5, 5, 5, 5, 3);
+
+    return this._diceBagService.create(defaultConfig);
   }
 }
 

@@ -5,7 +5,9 @@ class DiceBagGenerator {
     this._diceGenerator = diceGenerator;
   }
 
-  
+  generate() {
+
+  }
 }
 
 export default DiceBagGenerator;

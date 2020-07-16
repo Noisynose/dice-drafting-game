@@ -6,15 +6,15 @@ import DiceBagGenerator from './core/generators/DiceBagGenerator';
 import TYPES from './types';
 
 const composeDiceBag = (container) => {
-  decorate(injectable(), TYPES.DiceGenerator);
+  decorate(injectable(), DiceGenerator);
 
-  decorate(injectable(), TYPES.DiceBagGenerator);
+  decorate(injectable(), DiceBagGenerator);
   decorate(inject(TYPES.DiceGenerator), DiceBagGenerator, 0);
 
-  decorate(injectable(), TYPES.DiceBagService);
+  decorate(injectable(), DiceBagService);
   decorate(inject(TYPES.DiceBagGenerator), DiceBagService, 0);
 
-  decorate(injectable(), TYPES.DiceBagController);
+  decorate(injectable(), DiceBagController);
   decorate(inject(TYPES.DiceBagService), DiceBagController, 0);
 
   container.bind(TYPES.DiceGenerator).to(DiceGenerator);
