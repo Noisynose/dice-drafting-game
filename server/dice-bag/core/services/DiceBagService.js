@@ -1,12 +1,14 @@
 class DiceBagService {
-  _diceGenerator;
+  _diceBagGenerator;
 
-  constructor(diceGenerator) {
-    this._diceGenerator = diceGenerator;
+  constructor(diceBagGenerator) {
+    this._diceBagGenerator = diceBagGenerator;
   }
 
   create(configuration) {
+    const diceBag = this._diceBagGenerator.generate(configuration);
 
+    return diceBag;
   }
 }
 

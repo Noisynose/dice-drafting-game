@@ -1,5 +1,13 @@
 import DiceBagConfiguration from './DiceBagConfiguration';
 
 describe('DiceBagConfiguration', () => {
-  it.todo('should be defined');
+  let config;
+
+  beforeEach(() => {
+    config = new DiceBagConfiguration();
+  });
+
+  it('should be defined', () => {
+    expect(config).toBeDefined();
+  });
 });

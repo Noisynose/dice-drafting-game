@@ -27,3 +27,5 @@ class Die {
     return this._value;
   }
 }
+
+export default Die

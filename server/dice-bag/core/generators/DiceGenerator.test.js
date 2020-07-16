@@ -1,5 +1,13 @@
 import DiceGenerator from './DiceGenerator';
 
 describe('DiceGenerator', () => {
-  it.todo('should be defined');
+  let generator;
+
+  beforeEach(() => {
+    generator = new DiceGenerator();
+  });
+
+  it('should be defined', () => {
+    expect(generator).toBeDefined();
+  });
 });
